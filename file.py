@@ -45,4 +45,9 @@ for key in enron_data.keys():
 print count_NaN_tp
 print ((float(count_NaN_tp))/len(enron_data.keys()))*100
 
-
+### What is the new number of POI’s in the dataset? What is the new number of POI’s with NaN for total_payments?
+count = 0
+for user in enron_data:
+    if enron_data[user]['poi'] == True and enron_data[user]['total_payments'] == 'NaN':
+        count+=1
+print count
